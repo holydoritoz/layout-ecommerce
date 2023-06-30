@@ -6,8 +6,12 @@
     box-sizing: border-box;
   }
 
+  /* Paleta de colores*/
+
   :root {
-    --primary-color: rgb(41, 41, 41);
+    --primary-color: #3b234a;
+    --second-color: #523961;
+    --third-color: #d4c7bf;
   }
 
   body {
@@ -16,13 +20,13 @@
 
 
   .grid-container {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     display: grid;
     grid-template-areas:
       "header header"
       "aside main"
       "footer footer";
-    grid-template-columns: 11rem 1fr;
+    grid-template-columns: 1fr 10fr;
     grid-template-rows: 4rem 1fr 3rem;
   }
 
@@ -35,12 +39,20 @@
     align-items: center;
     background-color: var(--primary-color);
     color: white;
+    gap: 1rem;
   }
+
+  header i {
+    font-size: 25px;
+  }
+
+
 
   /* Aside CSS*/
 
   aside {
-    height: 90vh;
+    height: 100%;
+    background-color: var(--third-color);
     grid-area: aside;
     display: flex;
     flex-direction: column;
@@ -64,6 +76,7 @@
   }
 
   aside a:hover {
+    color: var(--primary-color);
     font-weight: bold;
   }
 
@@ -85,9 +98,9 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    border-radius: 5%;
     overflow: hidden;
     gap: 1rem;
+    border-radius: 5%;
   }
 
   .items-card img {
@@ -95,17 +108,16 @@
   }
 
   .items-card h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .items-card p {
-    font-size: 1.2rem;
-    color: green;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: lighter;
   }
 
   .items-card .btn-item {
-    background-color: var(--primary-color);
+    background-color: var(--second-color);
     padding: 0.5rem;
     width: 100%;
     text-align: center;
